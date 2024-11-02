@@ -15,5 +15,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val addPostIntent = Intent(this,AddPostActivity::class.java)
+
+        binding.tvAddPost.setOnClickListener {
+            startActivity(addPostIntent)
+            finish()
+        }
+
+
     }
 }
