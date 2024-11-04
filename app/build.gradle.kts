@@ -25,6 +25,7 @@ android {
 
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 
     buildTypes {
@@ -60,7 +61,6 @@ dependencies {
     implementation(libs.retrofit)
     implementation (libs.converter.gson)
     implementation (libs.okhttp)
-    implementation(libs.logginginterceptor)
     implementation(libs.okhttp3.logging.interceptor)
 
     //gson
