@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.alom.androidstudy2.databinding.ItemMarketBinding
 import com.bumptech.glide.Glide
 
-class MarketAdapter(val postList: ArrayList<PostData>) :
+class MarketAdapter(val postList: ArrayList<Data>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding = ItemMarketBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -19,9 +19,8 @@ class MarketAdapter(val postList: ArrayList<PostData>) :
         if(holder is MarketViewHolder){
             Glide
                 .with(holder.itemView.context)
-                .load(postList[position].img)
+                .load(postList[position].image_url)
                 .into(holder.img)
-
             holder.goodsTime.text = postList[position].time
             holder.goodsPrice.text = postList[position].price
             holder.goodsTitle.text = postList[position].title
